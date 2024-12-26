@@ -7,9 +7,9 @@ use App\Models\Province;
 
 class ProvinceController extends Controller
 {
-  public function index()
+  public function showProvinces()
   {
     $provinces = Province::all();
-    return view('province', ['provinces' => $provinces]);
+    return view('map.province', ['provinces' => $provinces]);
   }
 }

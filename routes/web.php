@@ -2,9 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProvinceController;
+use App\Http\Controllers\RegencyController;
 
 Route::get('/', function () {
   return view('welcome');
 });
 
-Route::get('/province', [ProvinceController::class, 'index']);
+Route::get('/map/provinces', [ProvinceController::class, 'showProvinces']);
+Route::get('/map/regencies', [RegencyController::class, 'showRegencies']);
